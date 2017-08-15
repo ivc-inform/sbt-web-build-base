@@ -14,8 +14,8 @@ object SbtWebBase extends AutoPlugin {
   override def requires = SbtPgp && ReleasePlugin //&& BintrayPlugin
 
   object autoImport {
-    def addSbtJsEngine(version: String): Setting[_] = addSbtPlugin("com.typesafe.sbt" % "sbt-js-engine" % version)
-    def addSbtWeb(version: String): Setting[_] = addSbtPlugin("com.typesafe.sbt" % "sbt-web" % version)
+//    def addSbtJsEngine(version: String): Setting[_] = addSbtPlugin("com.typesafe.sbt" % "sbt-js-engine" % version)
+//    def addSbtWeb(version: String): Setting[_] = addSbtPlugin("com.typesafe.sbt" % "sbt-web" % version)
   }
 
   override def projectSettings = ScriptedPlugin.projectSettings ++ Seq(
