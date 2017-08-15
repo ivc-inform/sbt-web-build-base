@@ -18,7 +18,7 @@ object SbtWebBase extends AutoPlugin {
     def addSbtWeb(version: String): Setting[_] = addSbtPlugin("com.typesafe.sbt" % "sbt-web" % version)
   }
 
-  override def projectSettings = ScriptedPlugin.scriptedSettings ++ Seq(
+  override def projectSettings = ScriptedPlugin.projectSettings ++ Seq(
     // General settings
     organization := "com.typesafe.sbt",
     homepage := Some(url(s"https://github.com/sbt/${name.value}")),
@@ -26,9 +26,9 @@ object SbtWebBase extends AutoPlugin {
     sbtPlugin := true,
     scalacOptions ++= Seq("-deprecation", "-feature", "-Xfatal-warnings"),
 
-    crossSbtVersions := Seq("0.13.16", "1.0.0"),
+    //crossSbtVersions := Seq("0.13.16", "1.0.0"),
 
-    ScriptedPlugin.scriptedLaunchOpts ++= Seq(
+    ScriptedPlugin.autoImport.scriptedLaunchOpts ++= Seq(
       "-XX:MaxMetaspaceSize=256m",
       s"-Dproject.version=${version.value}"
     ),
