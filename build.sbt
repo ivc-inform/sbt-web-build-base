@@ -8,7 +8,9 @@ scalaVersion := "2.12.3"
 
 addSbtPlugin("com.github.gseitz" % "sbt-release" % sbtReleaseVersion)
 addSbtPlugin("com.jsuereth" % "sbt-pgp" % sbtPgpVersion)
-addSbtPlugin("org.foundweekends" % "sbt-bintray" % sbtBintrayVersion)
+
+//addSbtPlugin("org.foundweekends" % "sbt-bintray" % sbtBintrayVersion)
+
 libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % scriptedPluginVersion
 
 //crossSbtVersions := Seq("0.13.16")

@@ -9,17 +9,17 @@ InputKey[Unit]("contains") := {
   }
 }
 
-PgpKeys.publishSigned := {
+/*PgpKeys.publishSigned := {
   IO.write(target.value / s"publish-version-${(sbtBinaryVersion in pluginCrossBuild).value}", version.value)
-}
+}*/
 
-publish := {
+/*publish := {
   throw sys.error("Publish should not have been invoked")
-}
+}*/
 
-bintrayRelease := {
+/*bintrayRelease := {
   IO.write(target.value / "bintray-release-version", version.value)
-}
+}*/
 
 // Pass the file for the scripted test to write to so that we can check that it ran
 scriptedLaunchOpts += s"-Dscripted-file=${target.value / s"scripted-ran-${(sbtBinaryVersion in pluginCrossBuild).value}"}"
