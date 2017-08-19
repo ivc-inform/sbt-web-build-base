@@ -34,7 +34,7 @@ object SbtWebBase extends AutoPlugin {
     ),
 
     // Publish settings
-    publishMavenStyle := false,
+    publishMavenStyle := true,
     /*bintrayOrganization := Some("sbt-web"),
     bintrayRepository := "sbt-plugin-releases",
     bintrayPackage := name.value,
